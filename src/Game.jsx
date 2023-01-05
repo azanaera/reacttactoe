@@ -1,3 +1,6 @@
+import './index.css'
+import React from 'react'
+
 function Square(props) {
     return (
       <button className="square" onClick={props.onClick}>
@@ -15,14 +18,10 @@ function Square(props) {
                 />
     );
   }
-    resetGame() {
-      this.setState({squares: []});
-    }
   
     render() {
       return (
         <div>
-          <button onClick={() => this.resetGame()}>Reset</button>
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -121,8 +120,5 @@ function Square(props) {
     return null;
   }
   
-  // ========================================
-  
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(<Game />);
+  export default Game
   
